@@ -21,7 +21,8 @@ app.use(express.json());
 app.use(
   cors({
     Credentials: true,
-    origin: '*'
+    origin: "*",
+    methods: ["GET", "PUT", "POST", "DELETE", "OPTIONS"],
   })
 );
 app.use(bodyParser.json());
