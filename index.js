@@ -21,6 +21,7 @@ app.use(express.json());
 app.use(
   cors({
     Credentials: true,
+    origin: '*'
   })
 );
 app.use(bodyParser.json());
@@ -31,5 +32,5 @@ app.use("/api", productRoutes.routes);
 app.use(error);
 
 app.listen(environements.port, () =>
-  // winston.info("App listening on url: http://localhost:" + environements.port)
+   winston.info("App listening on url: http://localhost:" + environements.port)
 );
